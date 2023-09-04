@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools and Games | Created by Jeffrey</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-subpage.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="/images/logo.JPG" alt="Logo" id="logo"></a>
+    </header>
+
+    <nav>
+        <div id="nav-wrapper-left">
+            <h1>Body Mass Index (BMI) calculator</h1>
+        </div>
+        <div id="nav-wrapper-right">
+            <div class="nav-element">About Us</div>
+            <div class="nav-element">Contact</div>
+        </div>
+    </nav>
+    <div id="main-section">
+        <div id="background-image"></div>
+        <div id="main-section-left">
+            <h3>
+                Understanding BMI: A Simple Guide</h3>
+            <p class="content">Body Mass Index (BMI) is a term you've probably heard in discussions about health and
+                wellness,
+                but what exactly does it mean? BMI is a straightforward yet widely used tool for assessing whether a
+                person
+                has a healthy body weight in relation to their height. Let's delve into what BMI is, how it's
+                calculated,
+                and what it can tell us about our health.</p><br>
+            <h3>What is BMI?</h3>
+            <p class="content">BMI is a numerical value derived from a simple formula that takes into account your
+                weight
+                and
+                height. It's used as a screening tool to categorize individuals into different weight categories,
+                providing
+                a rough estimate of whether they are underweight, normal weight, overweight, or obese. BMI is often used
+                by
+                healthcare professionals and researchers as an initial indicator of potential health risks associated
+                with
+                weight.</p><br>
+            <h3>How is BMI Calculated?</h3>
+            <p class="bold content">The formula for calculating BMI is:</p>
+            <p class="content">BMI = (Weight in kilograms) / (Height in meters)²</p>
+            <p class="content">Or, if you prefer using pounds and inches:</p>
+            <p class="content">BMI = (Weight in pounds) / (Height in inches)² × 703</p>
+            <p class="content">For example, if a person weighs 70 kilograms and is 1.75 meters tall, their BMI is:</p>
+            <p class="content">BMI = 70 / (1.75 × 1.75) = 22.86</p>
+            <b class="content"></b>
+            <br>
+            <h3>What does your BMI Mean?</h3>
+            <p class="content">Once you've calculated your BMI, it falls int one of the following categories:
+            </p>
+            <div id="ul-wrapper">
+                <li><strong>Underweight</strong>: BMI less than 18.5
+                </li>
+                <li><strong>Normal weight</strong>: BMI between 18.5 and 24.9</li>
+                <li><strong>Overweight</strong>: BMI between 25 and 29.9</li>
+                <li><strong>Obese</strong>: BMI of 30 or greater</li>
+            </div>
+            <ul>
+            </ul>
+        </div>
+        <div id="main-section-right">
+            <div id="input-Section">
+                <h3>Calculate Here</h3>
+                <div id="line"></div>
+                <div id="input-Statements">
+                    <div id="unitSystemStatement">
+                        <div>
+                            I am using </div>
+                        <select onchange="changeUnitStatement()" name="metricOrImperial" id="metricOrImperial">
+                            <option value="metric">Metric</option>
+                            <option value="imperial">Imperial</option>
+                        </select>
+                    </div>
+
+                    <div id="heightStatement">
+                        <div>My height is</div>
+                        <div id="metricHeightWrapper">
+                            <div id="metricHeight">
+                                <input id="metricCm" type="text" inputmode="numeric" value="170">
+                                <div>cm</div>
+                            </div>
+                        </div>
+
+                        <div id="imperialHeightWrapper">
+                            <div id="imperialHeight">
+                                <input id="imperialFt" type="text" inputmode="numeric" value="5">
+                                <div>ft</div>
+                                <input id="imperialIn" type="text" inputmode="numeric" value="7">
+                                <div>in</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="weightStatement">
+                        <div>My weight is</div>
+                        <div id="metricWeightWrapper">
+                            <div id="metricWeight">
+                                <input id="metricKg" type="text" inputmode="numeric" value="70">
+                                <div>kg</div>
+                            </div>
+                        </div>
+
+                        <div id="imperialWeightWrapper">
+                            <div id="imperialWeight">
+                                <input id="imperiallbs" type="text" inputmode="numeric" value="155">
+                                <div>lbs</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="ageStatement">
+                        <div>My age is</div>
+                        <input id="age" type="text" inputmode="numeric" value="30">
+
+                    </div>
+                </div>
+                <div onclick="calculateBMI()" id="button-container"><img id="calculate-img"
+                        src="images/arrow-down-circle-svgrepo-com.svg">
+                </div>
+            </div>
+            <div id="output-Section">
+                <div id="bmi-Statement">
+                    <div>Your estimated BMI is: </div>
+                    <div id="calculatedBMI">24</div>
+                </div>
+                <div id="bmi-Evaluation">
+                    <div>This indicates you are in the:</div>
+                    <div id="weightCategory">Normal Weight</div>
+                    <div id="category">category. </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
